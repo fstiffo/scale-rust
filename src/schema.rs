@@ -1,6 +1,6 @@
 table! {
     journal_entries (id) {
-        id -> Nullable<Integer>,
+        id -> Integer,
         date -> Timestamp,
         debit -> Integer,
         credit -> Integer,
@@ -12,14 +12,14 @@ table! {
 
 table! {
     owners (id) {
-        id -> Nullable<Integer>,
+        id -> Integer,
         name -> Text,
     }
 }
 
 table! {
     params (id) {
-        id -> Nullable<Integer>,
+        id -> Integer,
         valid_from -> Timestamp,
         stairs_cleaning_fee -> Integer,
         cleanings_per_month -> Integer,
@@ -29,8 +29,4 @@ table! {
 
 joinable!(journal_entries -> owners (owner_id));
 
-allow_tables_to_appear_in_same_query!(
-    journal_entries,
-    owners,
-    params,
-);
+allow_tables_to_appear_in_same_query!(journal_entries, owners, params,);
