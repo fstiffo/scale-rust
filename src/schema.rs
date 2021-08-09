@@ -1,9 +1,6 @@
 table! {
     journal_entries (id) {
         id -> Nullable<Integer>,
-        created_at -> Nullable<Timestamp>,
-        updated_at -> Nullable<Timestamp>,
-        deleted_at -> Nullable<Timestamp>,
         date -> Timestamp,
         debit -> Integer,
         credit -> Integer,
@@ -16,9 +13,6 @@ table! {
 table! {
     owners (id) {
         id -> Nullable<Integer>,
-        created_at -> Nullable<Timestamp>,
-        updated_at -> Nullable<Timestamp>,
-        deleted_at -> Nullable<Timestamp>,
         name -> Text,
     }
 }
@@ -26,9 +20,6 @@ table! {
 table! {
     params (id) {
         id -> Nullable<Integer>,
-        created_at -> Nullable<Timestamp>,
-        updated_at -> Nullable<Timestamp>,
-        deleted_at -> Nullable<Timestamp>,
         valid_from -> Timestamp,
         stairs_cleaning_fee -> Integer,
         cleanings_per_month -> Integer,

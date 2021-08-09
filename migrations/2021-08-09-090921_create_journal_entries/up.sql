@@ -3,9 +3,6 @@
 -- Table: journal_entries
 CREATE TABLE journal_entries (
     id          INTEGER PRIMARY KEY AUTOINCREMENT,
-    created_at  DATETIME,
-    updated_at  DATETIME,
-    deleted_at  DATETIME,
     date        DATETIME NOT NULL,
     debit       INTEGER  NOT NULL DEFAULT (0),
     credit      INTEGER NOT NULL DEFAULT (0),
