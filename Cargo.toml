@@ -1,6 +1,8 @@
 [package]
 name = "scale_rust"
 version = "0.1.0"
+license = "MIT"
+authors = ["Francesco Stiffoni <fstiffo@sgajo.com>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
