@@ -1,6 +1,8 @@
 extern crate chrono;
 use chrono::NaiveDateTime;
 
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Debug)]
+#[repr(i32)]
 pub enum Account {
     StairsPayment = 1,
     Loan = 2,
@@ -8,6 +10,19 @@ pub enum Account {
     DuesPayment = 4,
     Expenditure = 5,
     Revenue = 6,
+}
+impl Account {
+    pub fn from_i32(value: i32) -> Account {
+        match value {
+            1 => Account::StairsPayment,
+            2 => Account::Loan,
+            3 => Account::Repayment,
+            4 => Account::DuesPayment,
+            5 => Account::Expenditure,
+            6 => Account::Revenue,
+            _ => panic!("Unknown value: {}", value),
+        }
+    }
 }
 
 #[derive(Queryable)]
